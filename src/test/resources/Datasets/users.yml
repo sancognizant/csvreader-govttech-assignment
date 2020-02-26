@@ -1,0 +1,12 @@
+UserDB:
+  - id: 1
+    name: "John"
+    salary: 2000.00
+
+  - id: 2
+    name: "Mary"
+    salary: 3500.50
+
+  - id: 3
+    name: "Jane"
+    salary: 5000.00
