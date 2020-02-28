@@ -15,6 +15,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Output getUsers() {
-        return Utility.getOutPut(userRepository.getUsers());
+        return Utility.getOutPut(userRepository.findAllBySalaryBetween(0, 4000));
     }
 }

@@ -36,7 +36,8 @@ public class UserRepositoryTest {
     @Test
     @DataSet("users.yml")
     void testgetUsersWitinSalaryRange() {
-        List<UserDB> users = userRepository.getUsers();
+        List<UserDB> users = userRepository.findAllBySalaryBetween(0, 4000);
+                //userRepository.getUsers();
         Assertions.assertEquals(2, users.size(), "only 2 salaries fall within range");
     }
 }

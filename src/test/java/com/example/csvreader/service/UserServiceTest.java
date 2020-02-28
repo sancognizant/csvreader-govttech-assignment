@@ -55,7 +55,7 @@ public class UserServiceTest {
         users.add(userDB);
         users.add(userDB1);
 
-        doReturn(users).when(userRepository).getUsers();
+        doReturn(users).when(userRepository).findAllBySalaryBetween(0, 4000);
         Output output = userService.getUsers();
 
         Assertions.assertEquals(userResults.size(), output.getResults().size());

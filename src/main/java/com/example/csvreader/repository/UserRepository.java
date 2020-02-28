@@ -11,8 +11,10 @@ import java.util.List;
 @Repository
 public interface UserRepository extends JpaRepository<UserDB, Long> {
 
-    String query = "SELECT u FROM UserDB u WHERE u.salary BETWEEN 0 and 4000 order by u.salary";
+  // String query = "SELECT u FROM UserDB u WHERE u.salary BETWEEN 0 and 4000 order by u.salary";
 
-    @Query(query)
-    List<UserDB> getUsers();
+//    @Query(query)
+//    List<UserDB> getUsers();
+
+    List <UserDB> findAllBySalaryBetween(double start, double end);
 }
